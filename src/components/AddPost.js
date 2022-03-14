@@ -4,7 +4,7 @@ import React, {Component} from "react";
 class AddPost extends Component {
     render() {
         return(
-            <div className="container">
+            <div className="container" style={{magin:'4rem auto'}}>
                 <h5 className="blue-text center-align">CandBlog</h5>
                 <form>
                     <div className="input-field">

@@ -7,9 +7,7 @@ class PostList extends Component {
             <div className="container">
                 <div className="row">
                     <PostDetail />
-                    <PostDetail />
-                    <PostDetail />
-                    <PostDetail />
+ 
                 </div>
             </div>
         )
