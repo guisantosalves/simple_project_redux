@@ -1,0 +1,2 @@
+ORDEM DE RENDERIZAÇÃO
+app -> homepage -> {addpost, PostList -> PostDetail }
