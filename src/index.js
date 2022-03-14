@@ -4,16 +4,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux';
 import postReducer from './store/reducers/postReducer'
-
+import {Provider} from 'react-redux';
 
 // pegando os dados do postReducer e passando como parâmetros para o createStore
 const store = createStore(postReducer);
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+  
   document.getElementById('root')
 );
 

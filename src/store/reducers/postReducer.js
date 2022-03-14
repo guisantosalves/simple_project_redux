@@ -5,8 +5,8 @@ const initState = {
         
     ],
 }
-
-const postReducer = (state, action) => {
+//state recebe os dados do initState
+const postReducer = (state = initState, action) => {
     return state
 };
 
