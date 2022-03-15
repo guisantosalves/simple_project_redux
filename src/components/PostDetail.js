@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 class PostDetail extends Component {
     render(){
@@ -11,7 +12,7 @@ class PostDetail extends Component {
                         <p>{this.props.post.content}</p>
                     </div>
                     <div className='card-action'>
-                        <button className='btn red'>Delete</button>
+                        <button onClick={() => this.props.deletePost(this.props.post.id)} className='btn red'>Delete</button>
                     </div>
                 </div>
             </div>
@@ -19,4 +20,17 @@ class PostDetail extends Component {
     }
 }
 
-export default PostDetail;
+//incrementa no props do redux
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        deletePost: (id) => {
+            dispatch({type: 'DELETE_POST', id})
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(PostDetail);
+//o modo de escrito do connect do redux
+//closurem, uma função que se lembra da sua reinicialização
+//high order function 
+//null pq n tem mapStateToProps

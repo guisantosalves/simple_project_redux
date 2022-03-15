@@ -9,6 +9,16 @@ const initState = {
 
 //state recebe os dados do initState
 const postReducer = (state = initState, action) => {
+    //console.log(state, action);
+    switch(action.type){
+        case 'DELETE_POST':
+            const newPost = state.posts.filter(post => post.id !== action.id)
+        return {
+            posts: newPost,
+        }
+        
+    }
+
     return state
 };
 
