@@ -18,6 +18,8 @@ class PostList extends Component {
     }
 }
 
+//usar mapDispatchToProps quando é pra setar dados ou actions para o store(postReducer)
+//usar o mapStateToProps quando é pra buscar dados do store(postReducer)
 const mapStateToProps = (state) => {
     return {
         posts: state.posts,

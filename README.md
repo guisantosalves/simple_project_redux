@@ -1,2 +1,2 @@
 # learning react
-leaning react with redux
+learning react with redux
