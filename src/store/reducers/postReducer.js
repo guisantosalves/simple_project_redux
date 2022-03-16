@@ -15,6 +15,8 @@ const postReducer = (state = initState, action) => {
             return {
                 // O Spread Operator é usado com bastante frequência principalmente quando queremos 
                 // utilizar a imutabilidade, ou seja, criar um objeto novo a partir de um objeto existente.
+                // ACTION RECEBE A MUDANÇA E PASSA A MUDANÇA PARA O STATE
+                // view -> actions -> state
                 posts: [action.post, ...state.posts],
             }
         default:
